@@ -32,6 +32,13 @@ export default {
   css: [
   ],
   /*
+  ** Loading
+  */
+  loading: {
+    color: 'white',
+    height: '4px'
+  },
+  /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
