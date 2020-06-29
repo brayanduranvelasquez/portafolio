@@ -39,6 +39,12 @@ export default {
     height: '4px'
   },
   /*
+  ** Esta configuracion solo usado justo cuando se ejecute npm run build
+  */
+  // router : {
+  //   base: '/portafolio/'
+  // },
+  /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
