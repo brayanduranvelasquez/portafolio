@@ -1,7 +1,9 @@
 <template>
   <div>
     <cabecera></cabecera>
-    <Nuxt />
+    <keep-alive>
+      <Nuxt />
+    </keep-alive>
   </div>
 </template>
 
