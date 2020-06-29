@@ -39,7 +39,6 @@
     import Tarjeta from '@/components/Tarjeta.vue';
 
     export default {
-       name: "Portafolio" ,
        components: {
            Tarjeta
        },
