@@ -42,6 +42,11 @@
        name: "Portafolio" ,
        components: {
            Tarjeta
+       },
+       head(){
+           return {
+               title: 'Portafolio'
+           }
        }
     }
 </script>
