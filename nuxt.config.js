@@ -15,14 +15,15 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Portafolio - Brayan DVelasquez',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'author', name: 'author', content: 'Brayan DVelasquez' },
+      { hid: 'revised', name: 'revised', content: '29/06/2020' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/img/favicon.png' }
     ]
   },
   /*
