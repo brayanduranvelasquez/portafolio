@@ -80,7 +80,7 @@
             }
         },
 
-        created(){
+        mounted(){
             // Si la imagen no esta cargada, debe pasar al else
             if(this.tarjetasCargadas.includes(this.nombreImg)) {
                 let imagen = new Image();
