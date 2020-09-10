@@ -4,7 +4,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -15,12 +15,12 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: 'Portafolio - Brayan DVelasquez',
+    title: 'Portafolio - Brayan Durán Velásquez',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'author', name: 'author', content: 'Brayan DVelasquez' },
-      { hid: 'revised', name: 'revised', content: '29/06/2020' }
+      { hid: 'author', name: 'author', content: 'Brayan Duran Velasquez' },
+      { hid: 'revised', name: 'revised', content: '10/09/2020' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/img/favicon.png' }
@@ -36,14 +36,8 @@ export default {
   */
   loading: {
     color: 'white',
-    height: '4px'
+    height: '2px'
   },
-  /*
-  ** Esta configuracion solo usado justo cuando se ejecute npm run build
-  */
-  // router : {
-  //   base: '/portafolio/'
-  // },
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
