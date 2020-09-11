@@ -20,15 +20,14 @@
                 </div>
 
                 <div class="sobreMi__contenedor-datos">
-
                     <div class="sobreMi__contenedor-datos-personales">
                         <div class="encabezado">
                             <p>Datos Personales</p>
                         </div>
                         
                         <div class="contenido">
-                            <p><b>Edad</b>: 18 años</p>
-                            <p><b>Vivo en</b>: Maturín, Monagas, Venezuela</p>
+                            <p><b>Edad</b>: 18 años.</p>
+                            <p><b>Vivo en</b>: Maturín, Monagas, Venezuela.</p>
                         </div>                        
                     </div>
 
@@ -50,19 +49,28 @@
                         </div>
 
                         <div class="contenido">
-                            <p><b>WhatsAap:</b> +58 4249064449</p>
                             <p><b>Correo Electronico:</b> brayan13s133@gmail.com</p>
-                            <p><b>Facebook:</b> BrayanDuranVelasquez</p>
-                            <p><b>Instagram:</b> @brayandvelasquezzz</p>
-                            <p><b>Github:</b> brayandvelasquez</p>
-                            <p><b>LinkedIn:</b> brayandvelasquez</p>
+                            <p><b>WhatsApp:</b>
+                                <a href="tel:+584249064449"> +584249064449</a>
+                            </p>
+                            <p><b>Facebook:</b> 
+                                <a href="https://facebook.com/brayanduranvelasquez" target="__blank"> brayanduranvelasquez</a>
+                            </p>
+                            <p><b>Github:</b>
+                                <a href="https://github.com/brayanduranvelasquez" target="__blank"> brayanduranvelasquez</a>
+                            </p>
+                            <p><b>LinkedIn:</b>
+                                <a href="https://www.linkedin.com/in/brayanduranvelasquez" target="__blank"> brayanduranvelasquez</a>
+                            </p>
                         </div>
                     </div>
 
                     <div class="sobreMi__contenedor-datos-habilidades">
                         <div class="encabezado">
-                            <p>Habilidades en</p>
+                            <p>Habilidades</p>
                         </div>
+
+                        <div clas="mensaje">He tenido practica y utilizado los siguientes lenguajes y frameworks:</div>
 
                         <div class="contenido">
                             <img src="@/assets/habilidades/html.png" title="Html">
@@ -70,15 +78,12 @@
                             <img src="@/assets/habilidades/js.png" title="Javascript">
                             <img src="@/assets/habilidades/php.png" title="Php">
                             <img src="@/assets/habilidades/mysql.png" title="Mysql">
+                            <img src="@/assets/habilidades/sass.png" title="Sass">
                             <img src="@/assets/habilidades/bootstrap.png" title="Bootstrap">
-                            <img src="@/assets/habilidades/materialize.png" title="Materialize">
-                            <img src="@/assets/habilidades/bulma.png" title="Bulma CSS">
-                            <img src="@/assets/habilidades/semantic.png" title="Semantic UI">
                             <img src="@/assets/habilidades/vue.png" title="Vuejs">
                             <img src="@/assets/habilidades/nuxt.png" title="Nuxtjs">
                         </div>
                     </div>
-
                 </div> <!-- div.sobreMi__contenedor-datos -->
             </div> <!-- div.sobreMi__contenedor -->
         </div> <!-- div.sobreMi -->
@@ -185,6 +190,11 @@
                                 font-size: 28px;
                                 font-weight: 550;
                                 margin-bottom: 4px;
+                        }
+
+                        .mensaje {
+                                font-size: 18px;
+                                margin-bottom: 6px;
                         }
 
                         .contenido {

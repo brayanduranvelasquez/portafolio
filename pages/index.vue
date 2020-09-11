@@ -12,19 +12,15 @@
       </div>
 
       <div class="inicio__redes-sociales">
-        <a href="https://facebook.com/BrayanDuranVelasquez" target="__blank">
+        <a href="https://facebook.com/brayanduranvelasquez" target="__blank">
           <img src="@/assets/icons/facebook.png">
         </a>
 
-        <a href="https://instagram.com/brayandvelasquezzz" target="__blank">
-          <img src="@/assets/icons/instagram.png">
-        </a>
-
-        <a href="https://github.com/BrayanDVelasquez" target="__blank">
+        <a href="https://github.com/brayanduranvelasquez" target="__blank">
           <img src="@/assets/icons/github.png">
         </a>
 
-        <a href="https://www.linkedin.com/in/brayan-d-velásquez-51bbb91a8/" target="__blank">
+        <a href="https://www.linkedin.com/in/brayanduranvelasquez" target="__blank">
           <img src="@/assets/icons/linkedin.png">
         </a>
       </div>
