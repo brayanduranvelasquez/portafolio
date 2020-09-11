@@ -1,3 +1,4 @@
-# Static
+# Despliegue
 
-Aqui se almacenan los archivos que no seran que compilados.
+Este sitio ha sido desplegado en Gh-pages
+[Ver el portafolio](https://brayandvelasquez.github.io/portafolio/)
