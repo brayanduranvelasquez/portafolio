@@ -30,6 +30,7 @@
                     v-for="name of extra"
                     :key="name"
                     :src="require(`@/assets/icons/lenguajes_frameworks/${name}.png`)"
+                    v-tooltip="{ content: name }"
                 >
             </div>
 
@@ -117,6 +118,8 @@
 </script>
 
 <style lang="scss">
+    @import '~/plugins/vue-tooltips/styles.scss';
+    
     .tarjeta {
         min-width: 280px;
         max-width: 280px;
