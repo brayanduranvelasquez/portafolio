@@ -9,12 +9,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
-    "serve": "nuxt serve",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "serve": "nuxt serve"
   },
   "dependencies": {
     "nuxt": "^2.13.0",
-    "push-dir": "^0.4.1",
     "v-tooltip": "^2.0.3"
   },
   "devDependencies": {
