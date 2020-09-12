@@ -21,6 +21,14 @@
                 <p> {{ descripcion }} </p><br>
             </div>
 
+            <div class="tarjeta__cuerpo-extra">
+                <img
+                    v-for="name of extra"
+                    :key="name"
+                    :src="require(`@/assets/icons/lenguajes_frameworks/${name}.png`)"
+                >
+            </div>
+
             <div class="tarjeta__cuerpo-enlace-repositorio">
                 <a :href="repositorio" target="_blank">Repositorio</a>
             </div>
@@ -49,6 +57,7 @@
             nombreImg: String,
             titulo: String,
             descripcion: String,
+            extra: Array,
             repositorio: String,
             ruta: String
         },
@@ -99,6 +108,8 @@
             } else {
                 this.cargandoImagen();
             }
+
+            
         }
     }
 </script>
@@ -143,6 +154,17 @@
                 max-height: 100px;
                 min-height: 100px;
                 text-align: center;
+            }
+
+            &-extra {
+                padding: 4px 6px;
+                min-height: 34px;
+                text-align: center;
+
+                img {
+                    padding: 0 1px;
+                    width: 28px;
+                }
             }
 
             &-enlace-repositorio{
