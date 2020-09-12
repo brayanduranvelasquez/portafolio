@@ -1,37 +1,36 @@
 <template>
     <div class="tarjeta">
-
         <div class="tarjeta__cuerpo">
-            <div v-if="!imgCargada">
-                <cargador></cargador>
-            </div>
+            <div class="tarjeta-brillo" v-if="tarjetaBrillo"></div>
 
-            <div v-else>
-                <img :src="url" alt="Captura de pantalla">
-            </div>
-        </div>
+            <div class="tarjeta__cuerpo-img">
+                <div v-if="!imgCargada">
+                    <cargador></cargador>
+                </div>
 
-        <div class="tarjeta__pie">
-
-            <div class="tarjeta__pie-titulo">
-                <p> {{ titulo }} </p>
-            </div>
-
-            <div class="tarjeta__pie-descripcion">
-    
-                <p> {{ descripcion }} </p><br>
-
-                <div class="tarjeta__pie-descripcion-extra">
-
-                    {{ extra }}
-
+                <div v-else>
+                    <img :src="url" alt="Captura de pantalla">
                 </div>
             </div>
 
+            <div class="tarjeta__cuerpo-titulo">
+                <p> {{ titulo }} </p>
+            </div>
+
+            <div class="tarjeta__cuerpo-descripcion">
+                <p> {{ descripcion }} </p><br>
+            </div>
+
+            <div class="tarjeta__cuerpo-enlace-repositorio">
+                <a :href="repositorio" target="_blank">Repositorio</a>
+            </div>
+        
+        </div>
+
+        <div class="tarjeta__pie" @mouseover="brillo" @mouseout="normalizar">
             <div class="tarjeta__pie-boton">
                 <a :href="ruta" target="__blank"><button>Ir al sitio</button></a>
             </div>
-
         </div> <!-- .tarjeta__pie-descripcion -->
     </div>
 </template>
@@ -50,14 +49,16 @@
             nombreImg: String,
             titulo: String,
             descripcion: String,
-            extra: String,
+            repositorio: String,
             ruta: String
         },
 
         data(){
             return {
                 imgCargada: false,
-                url: null
+                url: null,
+
+                tarjetaBrillo: false // Para efecto de seleccionado 
             }
         },
 
@@ -77,6 +78,14 @@
                     this.imgCargada = true;
                     this.agregarTarjetaCargada(this.nombreImg);
                 }
+            },
+
+            brillo(){
+                this.tarjetaBrillo = true;
+            },
+
+            normalizar(){
+                this.tarjetaBrillo = false;
             }
         },
 
@@ -101,40 +110,53 @@
         background: white;
         font-size: 16px;
         margin: 20px 10px;
-
+        border-radius: 0px 0px 12px 12px;
+        overflow: hidden;
+        
         &__cuerpo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 150px;
-            background-color: rgb(231, 231, 231);
-
-            img {
-                width: 100%;
-                height: 151px;
-            }
-        }
-
-        &__pie {
             color: #000;
+            position: relative;
+
+            &-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 125px;
+                background-color: rgb(231, 231, 231);
+
+                img {
+                    width: 100%;
+                    height: 151px;
+                }
+            }
 
             &-titulo {
                 min-height: 55px;
                 font-size: 1.1em;
-                padding: 15px;
+                padding: 20px;
                 text-align: center;
                 font-weight: bold;
             }
 
             &-descripcion {
                 padding: 0 10px;
-                max-height: 140px;
-                min-height: 140px;
+                max-height: 100px;
+                min-height: 100px;
                 text-align: center;
             }
 
+            &-enlace-repositorio{
+                text-align: right;
+                padding-bottom: 12px;
+                padding-right: 16px;
+            }
+        }
+
+        &__pie {
+
             &-boton {
                 width: 100%;
+                cursor: pointer;
 
                 a {
                     button {
@@ -154,6 +176,25 @@
                 }
 
             }
+        }
+    }
+
+    .tarjeta-brillo {
+        animation-name: brillo;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    @keyframes brillo {
+        from{
+            background: rgba(255, 255, 255, 0);
+        }
+
+        to{
+            background: rgba(255, 255, 255, 0.603);
         }
     }
 </style>
