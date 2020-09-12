@@ -70,18 +70,54 @@
                             <p>Habilidades</p>
                         </div>
 
-                        <div clas="mensaje">He tenido practica y utilizado los siguientes lenguajes y frameworks:</div>
+                        <div clas="mensaje">Yo tengo conocimientos de como usar los siguientes lenguajes y frameworks:</div>
 
                         <div class="contenido">
-                            <img src="@/assets/habilidades/html.png" title="Html">
-                            <img src="@/assets/habilidades/css.png" title="Css">
-                            <img src="@/assets/habilidades/js.png" title="Javascript">
-                            <img src="@/assets/habilidades/php.png" title="Php">
-                            <img src="@/assets/habilidades/mysql.png" title="Mysql">
-                            <img src="@/assets/habilidades/sass.png" title="Sass">
-                            <img src="@/assets/habilidades/bootstrap.png" title="Bootstrap">
-                            <img src="@/assets/habilidades/vue.png" title="Vuejs">
-                            <img src="@/assets/habilidades/nuxt.png" title="Nuxtjs">
+                            <img 
+                                src="@/assets/habilidades/html.png" 
+                                title="Html" 
+                                v-tooltip="{ content: 'HTML' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/css.png" 
+                                title="CSS"
+                                v-tooltip="{ content: 'CSS' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/js.png" 
+                                title="Javascript"
+                                v-tooltip="{ content: 'JavaScript' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/php.png" 
+                                title="Php"
+                                v-tooltip="{ content: 'PHP' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/mysql.png" 
+                                title="Mysql"
+                                v-tooltip="{ content: 'Mysql' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/sass.png" 
+                                title="Sass"
+                                v-tooltip="{ content: 'Sass' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/bootstrap.png" 
+                                title="Bootstrap"
+                                v-tooltip="{ content: 'Bootstrap' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/vue.png" 
+                                title="Vuejs"
+                                v-tooltip="{ content: 'Vuejs' }"
+                            >
+                            <img 
+                                src="@/assets/habilidades/nuxt.png" 
+                                title="Nuxtjs"
+                                v-tooltip="{ content: 'Nuxtjs' }"
+                            >
                         </div>
                     </div>
                 </div> <!-- div.sobreMi__contenedor-datos -->
@@ -101,6 +137,8 @@
 </script>
 
 <style lang="scss">
+    @import '~/plugins/vue-tooltips/styles.scss';
+
     main {
         min-height: 100vh;
     }
@@ -249,4 +287,5 @@
             }            
         }
     }
+
 </style>

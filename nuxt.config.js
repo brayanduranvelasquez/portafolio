@@ -43,6 +43,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+   '@/plugins/vue-tooltips/vue-tooltips.js'
   ],
   /*
   ** Auto import components
