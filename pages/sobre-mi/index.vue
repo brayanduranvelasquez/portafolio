@@ -6,7 +6,6 @@
             </div>
 
             <div class="sobreMi__contenedor">
-
                 <div class="sobreMi__contenedor-img">
                     <img src="@/assets/perfil.jpg">
                 </div>
@@ -70,58 +69,17 @@
                             <p>Habilidades</p>
                         </div>
 
-                        <div clas="mensaje">Yo tengo conocimientos de como usar los siguientes lenguajes y frameworks:</div>
+                        <div class="mensaje">
+                            <p>Yo tengo conocimientos de como usar los siguientes lenguajes y frameworks:</p>
+                        </div>
 
                         <div class="contenido">
                             <img 
-                                src="@/assets/habilidades/html.png" 
-                                title="Html" 
-                                v-tooltip="{ content: 'HTML' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/css.png" 
-                                title="CSS"
-                                v-tooltip="{ content: 'CSS' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/js.png" 
-                                title="Javascript"
-                                v-tooltip="{ content: 'JavaScript' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/php.png" 
-                                title="Php"
-                                v-tooltip="{ content: 'PHP' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/mysql.png" 
-                                title="Mysql"
-                                v-tooltip="{ content: 'Mysql' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/sass.png" 
-                                title="Sass"
-                                v-tooltip="{ content: 'Sass' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/bootstrap.png" 
-                                title="Bootstrap"
-                                v-tooltip="{ content: 'Bootstrap' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/bulma.png" 
-                                title="Bootstrap"
-                                v-tooltip="{ content: 'Bulma' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/vue.png" 
-                                title="Vuejs"
-                                v-tooltip="{ content: 'Vuejs' }"
-                            >
-                            <img 
-                                src="@/assets/habilidades/nuxt.png" 
-                                title="Nuxtjs"
-                                v-tooltip="{ content: 'Nuxtjs' }"
+                                v-for="name of habilidades"
+                                :key="name"
+                                :src="require(`@/assets/habilidades/${name}.png`)"  
+                                :title="`${name}`" 
+                                v-tooltip="{ content: `${name}` }"
                             >
                         </div>
                     </div>
@@ -136,6 +94,11 @@
         head(){
             return {
                 title: 'Sobre mi'
+            }
+        },
+        data(){
+            return {
+                habilidades: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL', 'SASS', 'BOOTSTRAP', 'BULMACSS', 'VUEJS', 'NUXTJS']
             }
         }
     }
@@ -230,14 +193,14 @@
                     &-habilidades {
 
                         .encabezado {
-                                font-size: 28px;
-                                font-weight: 550;
-                                margin-bottom: 4px;
+                            font-size: 28px;
+                            font-weight: 550;
+                            margin-bottom: 4px;
                         }
 
                         .mensaje {
-                                font-size: 18px;
-                                margin-bottom: 6px;
+                            margin-bottom: 6px;
+                            margin-left: 14px;
                         }
 
                         .contenido {
