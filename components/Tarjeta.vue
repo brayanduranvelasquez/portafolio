@@ -1,10 +1,14 @@
 <template>
     <div class="tarjeta">
         <div class="tarjeta__cuerpo">
-            <div class="tarjeta-brillo" v-if="tarjetaBrillo"></div>
+
+            <div class="tarjeta-brillo" v-if="tarjetaBrillo">
+                <!-- Permite que cuando el usuario coloque el puntero por encima de "ir al sitio", la tarjeta se iluminara, como efecto a que esta siendo elegina -->
+            </div>
 
             <div class="tarjeta__cuerpo-img">
                 <div v-if="!imgCargada">
+                    <!-- Si la imagen aun no ha sido cargada completamente, se mostrara un cargador (CSS) -->
                     <cargador></cargador>
                 </div>
 
@@ -39,7 +43,7 @@
             <div class="tarjeta__pie-boton">
                 <a :href="ruta" target="__blank"><button>Ir al sitio</button></a>
             </div>
-        </div> <!-- .tarjeta__pie-descripcion -->
+        </div>
     </div>
 </template>
 
@@ -108,8 +112,6 @@
             } else {
                 this.cargandoImagen();
             }
-
-            
         }
     }
 </script>
@@ -118,15 +120,16 @@
     .tarjeta {
         min-width: 280px;
         max-width: 280px;
-        background: white;
         font-size: 16px;
         margin: 20px 10px;
         border-radius: 0px 0px 12px 12px;
         overflow: hidden;
+        background: transparent;
         
         &__cuerpo {
             color: #000;
             position: relative;
+            background: white;
 
             &-img {
                 display: flex;
@@ -175,15 +178,17 @@
         }
 
         &__pie {
+            background: transparent;
 
             &-boton {
                 width: 100%;
                 cursor: pointer;
+                overflow: hidden;
 
                 a {
                     button {
                         width: 100%;
-                        padding: 15px 0px;
+                        padding: 16px 0px;
                         font-size: 1.2em;
                         background: rgb(12, 138, 255);
                         color: #fff;
