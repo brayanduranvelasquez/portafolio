@@ -109,6 +109,11 @@
                                 v-tooltip="{ content: 'Bootstrap' }"
                             >
                             <img 
+                                src="@/assets/habilidades/bulma.png" 
+                                title="Bootstrap"
+                                v-tooltip="{ content: 'Bulma' }"
+                            >
+                            <img 
                                 src="@/assets/habilidades/vue.png" 
                                 title="Vuejs"
                                 v-tooltip="{ content: 'Vuejs' }"
@@ -173,13 +178,13 @@
                     margin: auto;
                     background-color: rgb(223, 223, 223);
                     border-radius: 50%;
-                    width: 200px;
-                    height: 200px;
+                    width: 180px;
+                    height: 180px;
 
                     img {
                         border-radius: 50%;
-                        width: 200px;
-                        height: 200px;
+                        width: 180px;
+                        height: 180px;
                         transition: 1s all;
                         
                         &:hover {
@@ -243,7 +248,7 @@
                             flex-flow: wrap;
 
                             img {
-                                width: 75px;
+                                width: 48px;
                                 margin: 5px;
                             }
                         }
@@ -271,6 +276,24 @@
             &__contenedor {
                 width: 92%;
 
+                &-img {
+                    width: 140px;
+                    height: 140px;
+
+                    img {
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+
+                &-nombre {
+
+                    p {
+                        font-size: 1.8em;
+                    }
+
+                }
+
                 &-datos {
 
                     &-habilidades {
@@ -278,7 +301,7 @@
                         .contenido {
 
                             img {
-                                width: 60px;
+                                width: 40px;
                             }
 
                         }
