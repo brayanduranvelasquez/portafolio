@@ -13,8 +13,8 @@ export default {
   /*
   ** Fallback
   */
-  generate: {
-    fallback: true
+  router: {
+    base: '/portafolio/'
   },
   /*
   ** Headers of the page
